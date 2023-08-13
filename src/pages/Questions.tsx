@@ -3,6 +3,7 @@ import Title from '../components/Questions/Title'
 import { getDatas } from '../api/formula'
 import Logout from '../components/Questions/Logout'
 import SearchBar from '../components/Questions/SearchBar'
+import { Link } from 'react-router-dom'
 import styles from './Questions.module.css'
 
 type FormulasType = {
@@ -33,6 +34,9 @@ export default function Questions() {
           <Title {...formula} key={formula.id} />
         ))}
       </ul>
+      <Link to='/ask' className={styles.goToAskBtn}>
+        질문 하러 가기
+      </Link>
       <Logout />
     </div>
   )

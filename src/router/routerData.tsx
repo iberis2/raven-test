@@ -4,6 +4,7 @@ const SignIn = lazy(() => import('../pages/SignIn'))
 const SignUp = lazy(() => import('../pages/SignUp'))
 const Questions = lazy(() => import('../pages/Questions'))
 const QuestionDetail = lazy(() => import('../pages/QuestionDetail'))
+const Ask = lazy(() => import('../pages/Ask'))
 
 type RouterElement = {
   id: number
@@ -59,6 +60,16 @@ export const routerData: RouterElement[] = [
     element: (
       <Suspense fallback={<div>Loading...</div>}>
         <QuestionDetail />
+      </Suspense>
+    ),
+    withAuth: true,
+  },
+  {
+    id: 5,
+    path: '/ask',
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <Ask />
       </Suspense>
     ),
     withAuth: true,

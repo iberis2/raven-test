@@ -1,0 +1,41 @@
+.form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 8fr 1fr;
+  gap: 24px;
+}
+
+.input {
+  padding-left: 16px;
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.textarea {
+  padding-left: 16px;
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+  width: 100%;
+  resize: none;
+}
+
+.latexPreviewBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.latexPreview {
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+  width: 100%;
+  background-color: rgba(220, 220, 220, 0.406);
+  padding: 10px;
+}
+
+.submitBtn {
+  background-color: lightblue;
+  border-radius: 6px;
+  color: #ffff;
+}
