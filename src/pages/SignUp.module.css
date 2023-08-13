@@ -1,5 +1,4 @@
 .signUpForm {
-  padding: 100px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -11,11 +10,11 @@
   border-radius: 6px;
   color: #ffff;
   padding: 10px 16px;
-  width: 300px;
+  width: 100%px;
   height: 40px;
 }
 
 .goSignIin {
-  width: 300px;
+  width: 100%;
   text-align: center;
 }

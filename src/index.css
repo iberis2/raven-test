@@ -62,11 +62,15 @@ input {
 html {
   font: 400 62.5%/1.5 SpoqaHanSansNeo, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  background-color: rgba(173, 216, 230, 0.698);
 }
 
 body {
   margin: 0 auto;
+  max-width: 640px;
   font-size: 1.6rem;
+  padding: 50px;
+  background-color: #ffff;
 }
 
 #root {
