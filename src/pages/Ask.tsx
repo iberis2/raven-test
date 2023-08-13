@@ -1,17 +1,30 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Formula from '../components/common/Formula'
-import { postData } from '../api/formula'
+import { patchData, postData } from '../api/formula'
 import { getUnixTime } from 'date-fns'
 import styles from './Ask.module.css'
+import { itemType } from './QuestionDetail'
 
-export default function Ask() {
+type AskProps = {
+  id: number
+  title: string
+  content: string
+  latex: string
+  closeEdit: () => void
+  updateItem: (data: itemType) => void
+}
+
+export default function Ask({
+  id,
+  title = '',
+  content = '',
+  latex = '',
+  closeEdit,
+  updateItem,
+}: AskProps) {
   const navigate = useNavigate()
-  const [inputValue, setInputValue] = useState({
-    title: '',
-    content: '',
-    latex: '',
-  })
+  const [inputValue, setInputValue] = useState({ title, content, latex })
 
   const handleChange = (
     type: 'title' | 'content' | 'latex',
@@ -22,12 +35,22 @@ export default function Ask() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log(inputValue)
+
+    if (id) {
+      const data = await patchData(id, inputValue)
+      updateItem(data)
+      closeEdit()
+      return
+    }
 
     const response = await postData({ ...inputValue, time: getUnixTime(new Date()) })
     if (response === 'success') {
       navigate('/questions')
     }
+  }
+
+  const handleCancel = () => {
+    id ? closeEdit() : navigate(-1)
   }
 
   return (
@@ -55,9 +78,14 @@ export default function Ask() {
         onChange={event => handleChange('content', event)}
         className={styles.textarea}
       />
-      <button type='submit' className={styles.submitBtn}>
-        질문 등록
-      </button>
+      <div className={styles.btnBox}>
+        <button type='submit' className={styles.submitBtn}>
+          질문 등록
+        </button>
+        <button type='button' onClick={handleCancel} className={styles.cancelBtn}>
+          취소
+        </button>
+      </div>
     </form>
   )
 }

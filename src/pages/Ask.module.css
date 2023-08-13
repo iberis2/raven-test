@@ -30,8 +30,20 @@
   padding: 10px;
 }
 
+.btnBox {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 24px;
+}
+
 .submitBtn {
   background-color: lightblue;
   border-radius: 6px;
   color: #ffff;
+}
+
+.cancelBtn {
+  color: lightblue;
+  border: 1px solid lightblue;
+  border-radius: 6px;
 }
