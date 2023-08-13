@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Title from '../components/Questions/Title'
 import { getDatas } from '../api/formula'
 import Logout from '../components/Questions/Logout'
-import AddFormula from '../components/Questions/AddFormula'
+import SearchBar from '../components/Questions/SearchBar'
 import styles from './Questions.module.css'
 
 type FormulasType = {
@@ -27,7 +27,7 @@ export default function Questions() {
 
   return (
     <div className={styles.questions}>
-      <AddFormula />
+      <SearchBar />
       <ul className={styles.ul}>
         {formulas.map(formula => (
           <Title {...formula} key={formula.id} />
