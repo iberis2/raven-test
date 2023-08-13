@@ -1,11 +1,14 @@
-import Latex from 'react-latex'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { routerData } from './router/routerData'
+import GeneralLayout from './layout/GeneralLayout'
+
+const router = createBrowserRouter(
+  routerData.map(routerElement => ({
+    path: routerElement.path,
+    element: <GeneralLayout>{routerElement.element}</GeneralLayout>,
+  }))
+)
 
 export default function App() {
-  const fraction = `$$\\frac{1}{2}$$`
-
-  return (
-    <div>
-      <Latex>{fraction}</Latex>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
