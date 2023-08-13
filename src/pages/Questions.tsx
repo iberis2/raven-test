@@ -10,6 +10,7 @@ type FormulasType = {
   time: number
   title: string
   latex: string
+  content: string
 }[]
 
 export default function Questions() {

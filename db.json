@@ -16,24 +16,28 @@
       "id": 1,
       "time": 1690677703,
       "title": "질문합니다",
+      "content": "이거 잘 모르겠어요",
       "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
     },
     {
       "id": 2,
       "time": 1690977703,
       "title": "이거 알려주세요",
+      "content": "어떻게 푸는 지 알려주세요",
       "latex": "$(3\\times 4) \\div (5-3)$"
     },
     {
       "id": 3,
       "time": 1691977703,
       "title": "첫사랑 얘기 해주세요",
+      "content": "여자친구 있어요? 아니 없어요 없었어요? 아니 없어요 아 있었는데? 아니 없어요 그냥",
       "latex": "$(3\\times 4) \\div (5-3)$"
     },
     {
       "id": 4,
       "time": 1692077703,
       "title": "보석상이 100만원 손해",
+      "content": "보석 안팔아",
       "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
     }
   ]
