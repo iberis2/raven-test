@@ -16,6 +16,21 @@
       "id": 1,
       "time": 1690677703,
       "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
+    },
+    {
+      "id": 2,
+      "time": 1690977703,
+      "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
+    },
+    {
+      "id": 3,
+      "time": 1691977703,
+      "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
+    },
+    {
+      "id": 4,
+      "time": 1692077703,
+      "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
     }
   ]
 }

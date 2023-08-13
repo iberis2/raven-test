@@ -12,7 +12,7 @@ export default function Time({ time, className = '' }: TimeProps) {
   return (
     <div className={`${styles.time} ${className}`}>
       <Icon name='calendar' size={14} />
-      {format(new Date(time * 1000), 'yyyy. MM. d. a h 시 mm 분', { locale: ko })}
+      {format(new Date(time * 1000), 'yyyy. MM. dd. a h 시 mm 분', { locale: ko })}
     </div>
   )
 }

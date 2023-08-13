@@ -1,5 +1,5 @@
-import Time from './Time'
-import Formula from './Formula'
+import Formula from '../common/Formula'
+import Time from '../common/Time'
 import styles from './Title.module.css'
 
 type QuestionProps = {
