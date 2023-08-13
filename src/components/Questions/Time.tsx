@@ -5,10 +5,10 @@ import styles from './Time.module.css'
 
 type TimeProps = {
   time: number
-  className: string
+  className?: string
 }
 
-export default function Time({ time, className }: TimeProps) {
+export default function Time({ time, className = '' }: TimeProps) {
   return (
     <div className={`${styles.time} ${className}`}>
       <Icon name='calendar' size={14} />

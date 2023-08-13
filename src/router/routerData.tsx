@@ -3,7 +3,6 @@ import { Suspense, lazy } from 'react'
 const SignIn = lazy(() => import('../pages/SignIn'))
 const SignUp = lazy(() => import('../pages/SignUp'))
 const Questions = lazy(() => import('../pages/Questions'))
-const Ask = lazy(() => import('../pages/Ask'))
 
 type RouterElement = {
   id: number
@@ -49,16 +48,6 @@ export const routerData: RouterElement[] = [
     element: (
       <Suspense fallback={<div>Loading...</div>}>
         <Questions />
-      </Suspense>
-    ),
-    withAuth: true,
-  },
-  {
-    id: 4,
-    path: '/ask',
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Ask />
       </Suspense>
     ),
     withAuth: true,
