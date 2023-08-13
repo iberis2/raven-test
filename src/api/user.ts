@@ -31,3 +31,22 @@ export const signIn = async ({ email, password }: SignInType) => {
     alert('로그인에 실패했습니다. 잠시 후 다시 시도해주세요')
   }
 }
+
+type SignUpType = {
+  email: string
+  userNickname: string
+  password: string
+}
+
+export const signUp = async ({ email, password }: SignUpType) => {
+  try {
+    await axios.post(`${baseURL}/user`, {
+      email,
+      password,
+    })
+
+    return 'success'
+  } catch {
+    alert('회원가입에 실패했습니다. 잠시 후 다시 시도해주세요')
+  }
+}

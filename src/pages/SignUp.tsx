@@ -4,9 +4,11 @@ import { FormValueType } from '../types/SignUpTypes'
 import Password from '../components/SignUp/Password'
 import PasswordCheck from '../components/SignUp/PasswordCheck'
 import styles from './SignUp.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { signUp } from '../api/user'
 
 export default function SignUp() {
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -14,8 +16,15 @@ export default function SignUp() {
     getValues,
   } = useForm<FormValueType>({ mode: 'onChange' })
 
+  const submitSignUp = async (data: FormValueType) => {
+    const response = await signUp(data)
+    if (response === 'success') {
+      navigate('/signin')
+    }
+  }
+
   return (
-    <form className={styles.signUpForm}>
+    <form className={styles.signUpForm} onSubmit={handleSubmit(data => submitSignUp(data))}>
       <Email register={register} dirtyFields={dirtyFields} errors={errors} />
       <Password register={register} dirtyFields={dirtyFields} errors={errors} />
       <PasswordCheck
