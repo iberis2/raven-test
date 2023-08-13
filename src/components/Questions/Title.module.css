@@ -1,8 +1,25 @@
-.li {
+.link {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.link:hover {
+  color: lightblue;
 }
 
 .date {
   align-self: flex-end;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  background-color: lightblue;
 }
