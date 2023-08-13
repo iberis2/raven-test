@@ -5,7 +5,9 @@
   gap: 24px;
 }
 
-.input {
+.input,
+.textarea,
+.latexPreview {
   padding-left: 16px;
   border: 1px solid gainsboro;
   border-radius: 6px;
@@ -14,10 +16,6 @@
 
 .textarea {
   padding-top: 16px;
-  padding-left: 16px;
-  border: 1px solid gainsboro;
-  border-radius: 6px;
-  width: 100%;
   resize: none;
 }
 
@@ -28,9 +26,6 @@
 }
 
 .latexPreview {
-  border: 1px solid gainsboro;
-  border-radius: 6px;
-  width: 100%;
   background-color: rgba(220, 220, 220, 0.406);
   padding: 10px;
 }

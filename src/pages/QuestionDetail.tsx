@@ -36,6 +36,14 @@ export default function QuestionDetail() {
         <pre>{item.content}</pre>
         {item.latex && <Formula latex={item.latex} className={styles.formula} />}
       </div>
+      <div className={styles.btnBox}>
+        <button type='button' className={styles.patchBtn}>
+          수정하기
+        </button>
+        <button type='button' className={styles.deleteBtn}>
+          삭제하기
+        </button>
+      </div>
     </div>
   )
 }
