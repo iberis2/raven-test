@@ -1,6 +1,6 @@
 import SpriteIcon from '../../assets/sprite-icon.svg'
 
-type IconNameType = 'eye' | 'eye-close'
+type IconNameType = 'eye' | 'eye-close' | 'calendar'
 
 type IconProps = {
   name: IconNameType

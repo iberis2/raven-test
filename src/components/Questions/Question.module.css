@@ -1,0 +1,8 @@
+.li {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  align-self: flex-end;
+}

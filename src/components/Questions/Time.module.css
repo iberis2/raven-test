@@ -1,0 +1,7 @@
+.time {
+  color: gray;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

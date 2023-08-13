@@ -11,9 +11,9 @@
       "password": "Qqqq123456!"
     }
   ],
-  "question": [
+  "formula": [
     {
-      "id": "234asdfi3j52",
+      "id": 1,
       "time": 1690677703,
       "latex": "$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$"
     }

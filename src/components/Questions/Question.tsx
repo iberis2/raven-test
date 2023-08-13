@@ -1,3 +1,7 @@
+import Time from './Time'
+import Formula from './Formula'
+import styles from './Question.module.css'
+
 // [
 //   {
 //     "id": "1",
@@ -6,6 +10,16 @@
 //   }
 // ]
 
-export default function Question() {
-  return <div>quest</div>
+type QuestionProps = {
+  time: number
+  latex: string
+}
+
+export default function Question({ time, latex }: QuestionProps) {
+  return (
+    <li className={styles.li}>
+      <Time time={time} className={styles.date} />
+      <Formula latex={latex} />
+    </li>
+  )
 }
