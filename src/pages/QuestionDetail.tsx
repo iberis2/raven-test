@@ -33,8 +33,8 @@ export default function QuestionDetail() {
       <h2 className={styles.title}>{item.title}</h2>
       <Time time={item.time} className={styles.date} />
       <div>
-        {item.content}
-        <Formula latex={item.latex} className={styles.formula} />
+        <pre>{item.content}</pre>
+        {item.latex && <Formula latex={item.latex} className={styles.formula} />}
       </div>
     </div>
   )
