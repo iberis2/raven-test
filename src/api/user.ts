@@ -1,7 +1,5 @@
-import axios from 'axios'
+import axios from './instance'
 import { saveUserIdToLocalStorage } from '../lib/localStorage'
-
-const baseURL = 'http://localhost:3001'
 
 type SignInType = {
   email: FormDataEntryValue | null
@@ -16,7 +14,7 @@ type userInfoType = {
 
 export const signIn = async ({ email, password }: SignInType) => {
   try {
-    const response = await axios.get(`${baseURL}/user`)
+    const response = await axios.get(`/user`)
     const userInfo = response.data.find(
       (user: userInfoType) => user.email === email && user.password === password
     )
@@ -40,7 +38,7 @@ type SignUpType = {
 
 export const signUp = async ({ email, password }: SignUpType) => {
   try {
-    await axios.post(`${baseURL}/user`, {
+    await axios.post(`/user`, {
       email,
       password,
     })

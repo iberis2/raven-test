@@ -3,26 +3,24 @@ import Question from '../components/Questions/Question'
 import { Link } from 'react-router-dom'
 import { removeUserIdFromLocalStorage } from '../lib/localStorage'
 import styles from './Questions.module.css'
+import { getData } from '../api/formula'
 
-const initial = [
-  {
-    id: 1,
-    email: 'test@test.com',
-    time: 1690677703,
-    latex: '$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$',
-  },
-  {
-    id: 2,
-    email: 'test@test.com',
-    time: 1690677703,
-    latex: '$f(x)=\\sin \\left(x+\\frac{\\pi}{2}\\right)-\\cos ^{2}(x+\\pi)$',
-  },
-]
+type FormulasType = {
+  id: number
+  time: number
+  latex: string
+}[]
 
 export default function Questions() {
-  const [questions, setQuestions] = useState(initial)
+  const [formulas, setFormulas] = useState<FormulasType>([])
+
+  const getFormula = async () => {
+    const response = await getData()
+    setFormulas(response)
+  }
+
   useEffect(() => {
-    // GET questions
+    getFormula()
   }, [])
 
   const handleLogOut = () => {
@@ -41,8 +39,8 @@ export default function Questions() {
         </button>
       </div>
       <ul className={styles.ul}>
-        {questions.map(question => (
-          <Question key={question.id} {...question} />
+        {formulas.map(formula => (
+          <Question key={formula.id} {...formula} />
         ))}
       </ul>
     </div>
