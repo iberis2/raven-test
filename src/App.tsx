@@ -1,3 +1,11 @@
+import Latex from 'react-latex'
+
 export default function App() {
-  return <div>App</div>
+  const fraction = `$$\\frac{1}{2}$$`
+
+  return (
+    <div>
+      <Latex>{fraction}</Latex>
+    </div>
+  )
 }
