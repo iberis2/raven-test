@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import Question from '../components/Questions/Question'
+import { Link } from 'react-router-dom'
+import Title from '../components/Questions/Title'
 import { getData } from '../api/formula'
 import Logout from '../components/Questions/Logout'
 import AddFormula from '../components/Questions/AddFormula'
@@ -28,10 +29,12 @@ export default function Questions() {
       <AddFormula />
       <ul className={styles.ul}>
         {formulas.map(formula => (
-          <Question key={formula.id} {...formula} />
+          <Link to={`/questions/${formula.id}`} className={styles.link} key={formula.id}>
+            <Title {...formula} />
+          </Link>
         ))}
       </ul>
-      <Logout className={styles.logoutBtn} />
+      <Logout />
     </div>
   )
 }
