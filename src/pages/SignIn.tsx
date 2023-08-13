@@ -24,12 +24,12 @@ export default function SignIn() {
     <form className={styles.form} onSubmit={submitSignIn}>
       <Email />
       <Password />
-      <div className={styles.btnBox}>
-        <button type='submit' className={styles.signInBtn}>
-          로그인
-        </button>
-        <Link to='/signup'>회원가입</Link>
-      </div>
+      <button type='submit' className={styles.signInBtn}>
+        로그인
+      </button>
+      <Link to='/signup' className={styles.goSignUp}>
+        회원가입 하러 가기
+      </Link>
     </form>
   )
 }

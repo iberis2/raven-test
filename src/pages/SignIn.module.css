@@ -4,16 +4,13 @@
   gap: 24px;
 }
 
-.btnBox {
-  display: flex;
-  align-items: center;
-  font-size: 1.6rem;
-  gap: 12px;
-}
-
 .signInBtn {
   color: #ffff;
   background-color: lightblue;
   border-radius: 6px;
   padding: 10px 16px;
+}
+
+.goSignUp {
+  text-align: center;
 }
