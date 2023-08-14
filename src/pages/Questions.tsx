@@ -16,10 +16,12 @@ type FormulasType = {
 
 export default function Questions() {
   const [formulas, setFormulas] = useState<FormulasType>([])
+  const [titles, setTitles] = useState<string[]>([])
 
   const getFormula = async () => {
-    const response = await getDatas()
+    const response: FormulasType = await getDatas()
     setFormulas(response)
+    setTitles(response.map(data => data.title))
   }
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function Questions() {
 
   return (
     <div className={styles.questions}>
-      <SearchBar />
+      <SearchBar titles={titles} />
       <ul className={styles.ul}>
         {formulas.map(formula => (
           <Title {...formula} key={formula.id} />
