@@ -61,3 +61,15 @@ $ npm run dev
 3. 타이틀을 클릭하면 질문 상세페이지로 갈 수 있습니다.
 4. 질문 상세 페이지에서 수정, 삭제가 가능합니다.
    ![](https://ifh.cc/g/FNgsOq.gif)
+
+## 사용 라이브러리
+
+- Typescript
+- React
+- Vite
+- axios
+- jason-server
+- react-latex
+- react-hook-form
+- react-router-dom
+- date-fns
